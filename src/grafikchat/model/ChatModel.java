@@ -16,7 +16,7 @@ import java.util.concurrent.SubmissionPublisher;
  *
  * @author Christian
  */
-public class ChatModel implements Publisher
+public class ChatModel
 {
   private Transmitter tm;
   private GrafikDaten gd;
@@ -38,6 +38,7 @@ public class ChatModel implements Publisher
   
   public void submit(Figur msg)
   {
+    this.setFigure(msg);
     iPublisher.submit(msg);
   }
   
@@ -100,9 +101,5 @@ public class ChatModel implements Publisher
   {
     return gd.getFigures();
   }
-  
-  @Override
-  public void subscribe(Flow.Subscriber subscriber)
-  {
-  }
+ 
 }

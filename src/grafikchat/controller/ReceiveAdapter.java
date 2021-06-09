@@ -8,7 +8,6 @@ package grafikchat.controller;
 
 import grafikchat.model.ChatModel;
 import grafikchat.model.Figur;
-import grafikchat.view.ChatView;
 import grafikchat.view.View;
 import java.util.concurrent.Flow;
 import java.util.concurrent.Flow.Subscriber;
@@ -54,7 +53,6 @@ public class ReceiveAdapter implements Subscriber<Figur>
   @Override
   public void onNext(Figur item)
   {
-    model.setFigure(item);
     view.repaint();
     subscription.request(1);
   }

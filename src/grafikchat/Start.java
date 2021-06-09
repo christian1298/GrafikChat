@@ -36,7 +36,6 @@ public class Start
     tm.setModel(chatmodel);   
        
     View drawview = view.getView1();
-    GrafikDaten model = new GrafikDaten();
     ReceiveAdapter rec = new ReceiveAdapter(drawview,chatmodel);
     rec.onSubscription();
     drawview.setModel(chatmodel);

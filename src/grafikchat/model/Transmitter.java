@@ -122,7 +122,8 @@ public class Transmitter implements Runnable
           sSocket = new ServerSocket(PORT);
           s = sSocket.accept();
         }
-        else if(mode == false) // if Client
+        else if(mode == false) // if Client!!!
+
         {
           lg.info("Starting Client");
           s = new Socket(IP, PORT);  // ACHTUNG blockiert!!!
